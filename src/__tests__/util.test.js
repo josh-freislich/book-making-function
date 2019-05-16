@@ -41,3 +41,16 @@ it('makeBook can match a large investor to multiple loans exceeding the availabl
 
   expect(result).toMatchObject(expectedBook);
 });
+
+/*****
+loans    :  ______ ___ _________
+investors:  _____________
+*/
+it('makeBook can match a large loan exceeding the available investment', () => {
+  const loans = [{id: 0, amount: 1e7, underwritten: 0}];
+  const investors = [{id: 0, amount: 1.5e6, invested: 0}];
+  const expectedBook = [{loanId: 0, investorId: 0, investedAmount: 1.5e6}];
+  const result = makeBook(loans, investors);
+
+  expect(result).toMatchObject(expectedBook);
+});
