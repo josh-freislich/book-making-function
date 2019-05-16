@@ -3,7 +3,7 @@ export const makeBook = (loans, investors) => {
 
   loans.map( (loan, index) => {
     const investor = investors.shift();
-    var investedAmount = Math.min(loan.amount, investor.amount);
+    const investedAmount = Math.min(loan.amount, investor.amount);
     book.push({
       loanId    : loan.id,
       investorId: investor.id,
