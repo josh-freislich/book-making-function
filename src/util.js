@@ -5,7 +5,7 @@ export const makeBook = (loans, investors) => {
     if (loan.underwritten < loan.amount) {
       for(var investor of investors) {
 
-        const investedAmount = Math.min(loan.amount, investor.amount);
+        const investedAmount = Math.min((loan.amount - loan.underwritten), (investor.amount - investor.invested));
         book.push({
           loanId    : loan.id,
           investorId: investor.id,
