@@ -1,33 +1,19 @@
-.App {
+body {
+  font-size: 14px;
+  padding: 2em;
+}
+
+.App > div > div {
+  white-space: nowrap;
+}
+
+.App > div > div > div {
   text-align: center;
+  display: inline-block;
+  border-style: solid;
+  border-width: 1px 1px 1px 0;
+  border-color: #999;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App > div > div > div:first-child {
+  border-left: 1px solid #999;
 }
